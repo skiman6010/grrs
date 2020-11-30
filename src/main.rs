@@ -2,6 +2,7 @@ use structopt::StructOpt;
 
 /// Search for a pattern in a file and display the lines that contain it.
 #[derive(StructOpt)]
+#[derive(Debug)]
 struct Cli {
     /// The pattern to look for
     pattern: String,
@@ -12,4 +13,5 @@ struct Cli {
 
 fn main() {
     let args = Cli::from_args();
+    println!("{:?}", args);
 }
